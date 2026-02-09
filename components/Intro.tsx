@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface IntroProps {
@@ -10,7 +11,7 @@ const Intro: React.FC<IntroProps> = ({ onEnter }) => {
       onClick={onEnter}
       className="fixed inset-0 z-10 flex flex-col items-center justify-center cursor-pointer group overflow-hidden"
     >
-      <div className="relative flex flex-col items-center select-none">
+      <div className="relative flex flex-col items-center select-none z-20">
         <div className="animate-text-reveal" style={{ animationDelay: '0.2s' }}>
           <h1 
             className="serif text-glow text-8xl md:text-[10rem] font-light tracking-tighter text-[#1A1A1A]"
@@ -33,10 +34,14 @@ const Intro: React.FC<IntroProps> = ({ onEnter }) => {
         </div>
       </div>
 
+      {/* Decorative corners - subtle visual anchors */}
       <div className="absolute top-12 left-12 w-12 h-px bg-[#1A1A1A] opacity-10 transition-all duration-700 group-hover:w-24"></div>
       <div className="absolute top-12 left-12 h-12 w-px bg-[#1A1A1A] opacity-10 transition-all duration-700 group-hover:h-24"></div>
       <div className="absolute bottom-12 right-12 w-12 h-px bg-[#1A1A1A] opacity-10 transition-all duration-700 group-hover:w-24"></div>
       <div className="absolute bottom-12 right-12 h-12 w-px bg-[#1A1A1A] opacity-10 transition-all duration-700 group-hover:h-24"></div>
+      
+      {/* Soft overlay to ensure contrast if needed */}
+      <div className="absolute inset-0 bg-white/10 pointer-events-none"></div>
     </div>
   );
 };
