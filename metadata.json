@@ -1,0 +1,7 @@
+{
+  "name": "XR Music - High-End Audio Minimalist",
+  "description": "A luxury-themed music management application for browsing local WAV files with feature-based categorization and a high-end interior magazine aesthetic.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
